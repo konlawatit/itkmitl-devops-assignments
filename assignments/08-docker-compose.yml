@@ -1,7 +1,7 @@
 services:
   ratings:
     build: ~/itkmitl-devops-assignments/ratings/.
-    image: ghcr.io/konlawatit/itkmitl-bookinfo-ratings:dev
+    image: ghcr.io/konlawatit/bookinfo-ratings:dev
     ports:
       - "8080:8080"
     environment:
@@ -20,12 +20,12 @@ services:
       MONGODB_DATABASE: ratings
   details:
     build:  ~/itkmitl-devops-assignments/details/.
-    image: ghcr.io/konlawatit/itkmitl-bookinfo-details:dev
+    image: ghcr.io/konlawatit/bookinfo-details:dev
     ports:
       - "8081:8081"
   reviews:
     build: ~/itkmitl-devops-assignments/reviews/.
-    image: ghcr.io/konlawatit/itkmitl-bookinfo-ratings:devi
+    image: ghcr.io/konlawatit/bookinfo-ratings:devi
     ports:
       - "8082:9080"
     environment:
@@ -33,7 +33,7 @@ services:
       ENABLE_RATINGS: "true"
   productpage:
     build: ~/itkmitl-devops-assignments/productpage/.
-    image: ghcr.io/konlawatit/itkmitl-bookinfo-productpage:dev
+    image: ghcr.io/konlawatit/bookinfo-productpage:dev
     ports:
       - "8083:9080"
     environment:
