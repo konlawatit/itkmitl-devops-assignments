@@ -1,0 +1,6 @@
+services:
+  details:
+    build: .
+    image: ghcr.io/konlawatit/bookinfo-details:dev
+    ports:
+      - "8081:8081"
